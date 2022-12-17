@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  bd:
+    image: postgres
+    environment:
+      POSTGRES_DB: votacao
+      POSTGRES_USER: development
+      POSTGRES_PASSWORD: development
+    ports:
+      - "5432:5432"
+    volumes:
+      - "./postgres/data:/var/etc/postgres/data"
