@@ -26,8 +26,7 @@ public class CadastrarPauta {
     @PutMapping("{sessao}/iniciar")
     public ResponseEntity<String> iniciarSessao(@PathVariable Integer sessao){
         pautaService.iniciarVotacao(sessao);
-        return  ResponseEntity.status(HttpStatus.ACCEPTED).body("Sessão aberta: o tempo default de votação é de 1 minuto.");
+        return  ResponseEntity.status(HttpStatus.ACCEPTED).body("Sessão iniciada: o tempo default de votação é de 1 minuto.");
     }
-
 
 }

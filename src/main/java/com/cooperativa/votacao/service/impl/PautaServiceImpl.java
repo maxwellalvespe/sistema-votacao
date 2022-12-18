@@ -33,7 +33,6 @@ public class PautaServiceImpl implements PautaService {
     public void iniciarVotacao(Integer idSessao) {
         var pauta = repository.findBySessao(idSessao).orElseThrow();
         pauta.setStatusSessao(true);
-        log.info("Pauta obtida :: {}", pauta);
         repository.save(pauta);
         finalizarSessao(pauta);
     }
