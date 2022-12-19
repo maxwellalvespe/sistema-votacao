@@ -1,6 +1,6 @@
 package com.cooperativa.votacao.model.enums;
 
-public enum Voto {
+public enum OpcoesDeVoto {
 
     SIM, NAO;
 }

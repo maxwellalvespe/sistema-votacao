@@ -1,6 +1,6 @@
 package com.cooperativa.votacao.model;
 
-import com.cooperativa.votacao.model.enums.Voto;
+import com.cooperativa.votacao.model.enums.OpcoesDeVoto;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,7 +23,7 @@ public class Pauta {
     private boolean statusSessao;
     private Long idUsuario;
     @Enumerated(EnumType.STRING)
-    private Voto voto;
+    private OpcoesDeVoto voto;
 
     private final LocalDateTime dataCriacao =  LocalDateTime.now();
 
